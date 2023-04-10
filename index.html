@@ -13,7 +13,7 @@
     <title>Luana & Jõao</title>
 </head>
 
-<body>
+<body onload="playaudio()">
     <div class="home">
         <p class="frase font-1-300">"O amor é paciente, o amor é bondoso. Não se inveja, não se vangloria, não se
             orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta.
@@ -38,7 +38,7 @@
                     </a>
                 </div>
                 <div class="confirmar flex">
-                    <a href="https://api.whatsapp.com/send?phone=558488625404&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada!"
+                    <a href="https://api.whatsapp.com/send?phone=5584988974050&text=Ol%C3%A1%2C%20presen%C3%A7a%20confirmada!"
                         target="_blank">
                         <img src="img/whats.svg">
                         <p>Confimar <br>Presença</p>
@@ -69,11 +69,18 @@
     </div>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rtOvBOTyX00?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-    <video>
+<audio src="audio/musica.mp3" id="audio" controls>
 
-    </video>
+</audio>
 
 </body>
 
+<script>
+function playaudio(){
+    const audio = document.querySelector("#audio");
+    audio.play();
+}
+
+</script>
 
 </html>
