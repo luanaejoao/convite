@@ -1,3 +1,41 @@
+.abrir{
+    background-color: white;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #808D7D;
+    top: 0px;
+    left: 0px;
+}
+
+.abrir button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: none;
+    background: transparent;
+    color: #808D7D;
+}
+
+.abrir.oculto{
+    display: none;
+}
+
+
+.js .home{
+    opacity: 0;
+}
+
+.home.ativo{
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s, opacity 1.5s;
+}
 .home {
     /* padding-top: 105px; */
     padding-top: 150px;

@@ -32,3 +32,20 @@ a {
     margin-left: auto;
     margin-right: auto;
 }
+
+.fadeInDown {
+    transform: translate3d(0, -20px, 0);
+}
+
+
+/* 7 Adicione o CSS Essencial abaixo */
+
+.js [data-anime] {
+    opacity: 0;
+}
+
+.js .anime {
+    opacity: 1;
+    transform: none;
+    transition: transform 0.8s, opacity 0.8s;
+}

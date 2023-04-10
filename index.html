@@ -12,11 +12,17 @@
         rel="stylesheet">
     <title>Luana & Jõao</title>
 </head>
-
-<body onload="playaudio()">
-    <div class="abrir"></div>
-    <div class="home">
-        <p class="frase font-1-300">"O amor é paciente, o amor é bondoso. Não se inveja, não se vangloria, não se
+<script>
+    document.documentElement.classList.add("js");
+</script>
+<div class="abrir">
+    <p class="font-2 nomes" data-anime="200">Luana e João</p>
+    <button class="frase font-1-400 btn-js" onclick="playaudio(), removeModal()" data-anime="600"><img src="img/convite.png" >abrir convite</button>
+    
+</div>
+<body>
+    <div class="home"> 
+        <p class="frase font-1-300 texto_biblico">"O amor é paciente, o amor é bondoso. Não se inveja, não se vangloria, não se
             orgulha. Não maltrata, não procura seus interesses, não se ira facilmente, não guarda rancor. O amor não se alegra com a injustiça, mas se alegra com a verdade. Tudo sofre, tudo crê, tudo espera, tudo suporta.
         <p class="frase versiculo"> 1 Coríntios 13:4-7</p>
 
@@ -68,20 +74,32 @@
         </div>
         <img src="img/LJ.png" id="logo">
     </div>
-<!--     <iframe width="560" height="315" src="https://www.youtube.com/embed/rtOvBOTyX00?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
- -->
-<audio src="audio/musica.mp3" id="audio" controls>
+<audio src="audio/musica.mp3" id="audio">
 
 </audio>
-<iframe src="audio/musica.mp3" allow="autoplay"></iframe>
+
 </body>
-<!-- <button onclick="playaudio()">a</button> -->
 <script>
+
+const btn = document.querySelector('.btn-js');
+btn.addEventListener("click", showModal);
+
 function playaudio(){
     const audio = document.querySelector("#audio");
     audio.play();
 }
 
-</script>
+function removeModal(){
+    const modal =  document.querySelector(".abrir");;
+    modal.classList.add("oculto");
+}
 
+function showModal(){
+    const home = document.querySelector(".home");
+    home.classList.add("ativo");
+}
+
+
+</script>
+<script src="simple-anime.js"></script>
 </html>
